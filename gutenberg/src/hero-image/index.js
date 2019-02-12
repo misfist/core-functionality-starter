@@ -17,7 +17,8 @@ const {
     BlockControls,
     Editable,
 	RichText, 
-	MediaUpload,
+    MediaUpload,
+    MediaPlaceholder,
 	URLInput,
 } = wp.editor;
 const {
@@ -135,43 +136,24 @@ registerBlockType( 'corefunctionality/hero-element', {
             });
         };
 
+        const mediaPlaceholder = <MediaPlaceholder
+
+            onSelect={ media => { setAttributes( { imgURL: media.url } ) } }
+			allowedTypes = { [ 'image' ] }
+			multiple = { false }
+			labels = { { title: 'The Image' } }
+		/>;
+
         const getImageButton = ( openEvent ) => {
-            if( attributes.imgURL ) {
-                return (
-                    <div className="button-container">
-                        <img
-                            src={ attributes.imgURL }
-                            onClick={ openEvent }
-                            className="image"
-                        />
-                        <Button
-                            onClick={ openEvent }
-                            className="btn btn-warning"
-                        >
-                            { __( 'Edit Image', 'card-block' ) }
-                        </Button>
-                        <Button
-                            onClick={ onRemoveImage }
-                            className="btn btn-danger"
-                        >
-                            { __( 'Remove Image', 'card-block' ) }
-                        </Button>
-                    </div>
-                );
-            }
-            else {
-                return (
-                    <div className="button-container">
-                        <Button
-                            onClick={ openEvent }
-                            className="btn btn-primary"
-                        >
-                            { __( 'Select an Image', 'card-block' ) }
-                        </Button>
-                    </div>
-                );
-            }
+
+            return (
+                <div>
+
+                </div>
+            );
+
         };
+
 		return (
 			<div className={ className }>
                 <BlockControls>
@@ -243,49 +225,16 @@ registerBlockType( 'corefunctionality/hero-element', {
 
                         )}
 
-                        <MediaUpload
+                        
+
+                        <MediaPlaceholder
                             onSelect={ media => { setAttributes( { imgAlt: media.alt, imgURL: media.url } ) } }
-                            type="image"
+                            allowedTypes = { [ 'image' ] }
+                            multiple = { false }
+                            labels = { { title: 'The Image' } }
                             value={ imgURL }
-                            render={ ( { open } ) => getImageButton( open ) }
                         />
                         
-                        { ! imgID ? (
-
-                            <MediaUpload
-                                onSelect={ onSelectImage }
-                                type="image"
-                                value={ imgID }
-                                render={ ( { open } ) => (
-                                    <IconButton
-                                        className="components-toolbar__control"
-                                        label={ __( 'Edit Media', 'core-functionality' ) }
-                                        icon="edit"
-                                        onClick={ open }
-                                    />
-                                ) }
-                            >
-                            </MediaUpload>
-
-                            ) : (
-
-                            <p class="image-wrapper">
-
-
-                                { isSelected ? (
-
-                                    <IconButton
-                                        className="components-toolbar__control"
-                                        label={ __( 'Remove Media', 'core-functionality' ) }
-                                        icon="no"
-                                        onClick={ onRemoveImage }
-                                    />
-
-                                ) : null }
-
-                            </p>
-                        )}
-
                 </div>
 			</div>
 		);
