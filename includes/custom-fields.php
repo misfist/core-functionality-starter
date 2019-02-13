@@ -862,84 +862,84 @@ if( function_exists( 'acf_add_local_field_group' ) ) {
 // 	'description' => '',
 // ));
 
-//   acf_add_local_field_group( array(
-//   	'key' => 'group_5b9f2a1c2783f',
-//   	'title' => __( 'Campaign CTA', 'core-functionality' ),
-//   	'fields' => array(
-//   		array(
-//   			'key' => 'field_5bce20f70b78f',
-//   			'label' => __( 'Action Text', 'core-functionality' ),
-//   			'name' => 'action_text',
-//   			'type' => 'wysiwyg',
-//   			'instructions' => '',
-//   			'required' => 0,
-//   			'conditional_logic' => 0,
-//   			'wrapper' => array(
-//   				'width' => '',
-//   				'class' => '',
-//   				'id' => '',
-//   			),
-//   			'default_value' => '',
-//   			'tabs' => 'all',
-//   			'toolbar' => 'basic',
-//   			'media_upload' => 0,
-//   			'delay' => 0,
-//   		),
-//   		array(
-//   			'key' => 'field_5bce210e0b790',
-//   			'label' => __( 'Action Links', 'core-functionality' ),
-//   			'name' => 'links',
-//   			'type' => 'repeater',
-//   			'instructions' => '',
-//   			'required' => 0,
-//   			'conditional_logic' => 0,
-//   			'wrapper' => array(
-//   				'width' => '',
-//   				'class' => '',
-//   				'id' => '',
-//   			),
-//   			'collapsed' => 'field_5bce212b0b791',
-//   			'min' => 0,
-//   			'max' => 0,
-//   			'layout' => 'row',
-//   			'button_label' => __( 'Add Action Link', 'core-functionality' ),
-//   			'sub_fields' => array(
-//   				array(
-//   					'key' => 'field_5bce21330b792',
-//   					'label' => __( 'Link', 'core-functionality' ),
-//   					'name' => 'link',
-//   					'type' => 'link',
-//   					'instructions' => '',
-//   					'required' => 0,
-//   					'conditional_logic' => 0,
-//   					'wrapper' => array(
-//   						'width' => '',
-//   						'class' => '',
-//   						'id' => '',
-//   					),
-//   					'return_format' => 'array',
-//   				),
-//   			),
-//   		),
-//   	),
-//   	'location' => array(
-//   		array(
-//   			array(
-//   				'param' => 'post_type',
-//   				'operator' => '==',
-//   				'value' => 'campaign',
-//   			),
-//   		),
-//   	),
-//   	'menu_order' => 0,
-//   	'position' => 'normal',
-//   	'style' => 'default',
-//   	'label_placement' => 'top',
-//   	'instruction_placement' => 'label',
-//   	'hide_on_screen' => '',
-//   	'active' => 1,
-//   	'description' => '',
-//   ));
+  acf_add_local_field_group( array(
+  	'key' => 'group_5b9f2a1c2783f',
+  	'title' => __( 'Campaign CTA', 'core-functionality' ),
+  	'fields' => array(
+  		array(
+  			'key' => 'field_5bce20f70b78f',
+  			'label' => __( 'Action Text', 'core-functionality' ),
+  			'name' => 'action_text',
+  			'type' => 'wysiwyg',
+  			'instructions' => '',
+  			'required' => 0,
+  			'conditional_logic' => 0,
+  			'wrapper' => array(
+  				'width' => '',
+  				'class' => '',
+  				'id' => '',
+  			),
+  			'default_value' => '',
+  			'tabs' => 'all',
+  			'toolbar' => 'basic',
+  			'media_upload' => 0,
+  			'delay' => 0,
+  		),
+  		array(
+  			'key' => 'field_5bce210e0b790',
+  			'label' => __( 'Action Links', 'core-functionality' ),
+  			'name' => 'links',
+  			'type' => 'repeater',
+  			'instructions' => '',
+  			'required' => 0,
+  			'conditional_logic' => 0,
+  			'wrapper' => array(
+  				'width' => '',
+  				'class' => '',
+  				'id' => '',
+  			),
+  			'collapsed' => 'field_5bce212b0b791',
+  			'min' => 0,
+  			'max' => 0,
+  			'layout' => 'row',
+  			'button_label' => __( 'Add Action Link', 'core-functionality' ),
+  			'sub_fields' => array(
+  				array(
+  					'key' => 'field_5bce21330b792',
+  					'label' => __( 'Link', 'core-functionality' ),
+  					'name' => 'link',
+  					'type' => 'link',
+  					'instructions' => '',
+  					'required' => 0,
+  					'conditional_logic' => 0,
+  					'wrapper' => array(
+  						'width' => '',
+  						'class' => '',
+  						'id' => '',
+  					),
+  					'return_format' => 'array',
+  				),
+  			),
+  		),
+  	),
+  	'location' => array(
+  		array(
+  			array(
+  				'param' => 'post_type',
+  				'operator' => '==',
+  				'value' => 'campaign',
+  			),
+  		),
+  	),
+  	'menu_order' => 0,
+  	'position' => 'normal',
+  	'style' => 'default',
+  	'label_placement' => 'top',
+  	'instruction_placement' => 'label',
+  	'hide_on_screen' => '',
+  	'active' => 1,
+  	'description' => '',
+  ));
 
   /* Event Fields */
   acf_add_local_field_group(array(
